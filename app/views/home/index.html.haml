@@ -3,4 +3,10 @@
 %h3
   I can display recent blog posts here. Or maybe other stuff.
 
-= link_to "View all posts", post_index_path
+= link_to "View all posts", posts_path
+
+%hr
+%h4
+  Admins only! Honor system until authorization implemented.
+  .admin
+    = link_to "Create new post", new_post_path
