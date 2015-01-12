@@ -2,6 +2,14 @@
   Create a new blog post
 
 = form_for @post, url: {action: "create"} do |f|
-  = f.text_field :title
-  = f.text_area :content
-  = f.submit "Create post"
+  %p
+    .title
+      = f.label :title, "Title: "
+      = f.text_field :title
+  %p
+    .content
+      = f.label :content, "Content: "
+      %br
+      = f.text_area :content
+  %p
+    = f.submit "Create post"
