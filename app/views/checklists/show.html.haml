@@ -1,0 +1,21 @@
+%h1
+  = @checklist.name
+
+%table
+  %thead
+    %tr
+      %th{ colspan:"3"}
+
+  %tbody
+    - @checklist_items.each do |checklist_item|
+      %tr
+        %td
+          = checklist_item.description
+        %td
+          = link_to 'Edit', edit_checklist_item_path(checklist_item)
+        %td
+          = link_to 'Destroy', checklist_item, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'Add item to list', new_checklist_item_path
