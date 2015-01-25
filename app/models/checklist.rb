@@ -1,5 +1,3 @@
 class Checklist < ActiveRecord::Base
-  def items
-    ChecklistItem.where(checklist_id: id)
-  end
+  has_many :checklist_items, dependent: :destroy
 end

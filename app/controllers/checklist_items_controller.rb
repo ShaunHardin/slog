@@ -1,18 +1,10 @@
 class ChecklistItemsController < ApplicationController
   before_action :set_checklist_item, only: [:show, :edit, :update, :destroy]
-
-  # GET /checklist_items
-  def index
-    @checklist_items = ChecklistItem.all
-  end
-
-  # GET /checklist_items/1
-  def show
-  end
+  before_action :set_checklist
 
   # GET /checklist_items/new
   def new
-    @checklist_item = ChecklistItem.new
+    @checklist_item = ChecklistItem.new(checklist_id: params[:checklist_id])
   end
 
   # GET /checklist_items/1/edit
@@ -24,7 +16,7 @@ class ChecklistItemsController < ApplicationController
     @checklist_item = ChecklistItem.new(checklist_item_params)
 
     if @checklist_item.save
-      redirect_to @checklist_item, notice: 'Checklist item was successfully created.'
+      redirect_to checklist_path(@checklist), notice: 'Checklist item was successfully created.'
     else
       render :new
     end
@@ -50,8 +42,12 @@ class ChecklistItemsController < ApplicationController
       @checklist_item = ChecklistItem.find(params[:id])
     end
 
+    def set_checklist
+      @checklist = Checklist.find(params[:checklist_id])
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def checklist_item_params
-      params[:checklist_item]
+      params[:checklist_item].permit([:description, :priority, :completed?])
     end
 end

@@ -1,2 +1,7 @@
+%h1
+  Checklists
 - @checklists.each do |checklist|
-  = link_to checklist.name, checklist_path(checklist)
+  %h3
+    = link_to checklist.name, checklist_path(checklist)
+%br
+= link_to 'Add new checklist', new_checklist_path
