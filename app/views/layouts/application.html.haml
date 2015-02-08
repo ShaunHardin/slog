@@ -10,5 +10,9 @@
     %header
       = render 'shared/header.html.haml'
     .container
+      %p.notice
+        = notice
+      %p.alert
+        = alert
       = yield
 
