@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
   before_filter :authenticate_user!, only: [:new, :create, :edit]
+  load_and_authorize_resource
+  skip_authorize_resource only: [:index, :show]
 
   def index
     @posts = Post.all
