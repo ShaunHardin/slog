@@ -39,5 +39,8 @@ gem 'spring',        group: :development
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# Use debugger
+# Use byebug for debugging
 gem 'byebug', group: [:development, :test]
+
+# Use devise for authentication
+gem 'devise'
