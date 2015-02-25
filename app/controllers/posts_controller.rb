@@ -1,7 +1,5 @@
 class PostsController < ApplicationController
   before_filter :authenticate_user!, only: [:new, :create, :edit]
-  load_and_authorize_resource
-  skip_authorize_resource only: [:index, :show]
 
   def index
     @posts = Post.all
@@ -21,6 +19,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new post_params
+    authorize @post, :manage?
 
     if @post.save
       flash[:success] = 'Post created!'
@@ -32,6 +31,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title, :content)
+    params.require(:post).permit(:title, :content, :commit)
   end
 end
