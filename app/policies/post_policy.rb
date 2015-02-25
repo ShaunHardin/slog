@@ -1,5 +1,6 @@
 class PostPolicy < ApplicationPolicy
   def manage?
+    return false if user.nil?
     user.admin?
   end
 
