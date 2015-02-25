@@ -5,7 +5,7 @@
 
 = link_to "View all posts", posts_path
 
-- if can? :manage, Post
+- if policy(:post).manage?
   %hr
   %h4
     Hello, admin user!

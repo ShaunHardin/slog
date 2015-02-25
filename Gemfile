@@ -27,8 +27,8 @@ gem 'spring', group: :development
 gem 'byebug', group: [:development, :test]
 # Use devise for authentication
 gem 'devise'
-# Use cancan for authorization
-gem 'cancan'
+# Use pundit for authorization
+gem 'pundit'
 # Use for Heroku integration
 gem 'rails_12factor', group: :production
 ruby '2.2.0'
