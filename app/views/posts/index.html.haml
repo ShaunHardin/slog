@@ -1,5 +1,7 @@
-- @posts.each do |post|
-  %h4
-    = link_to "#{post.title}", post_path(post)
-  %p
-    = truncate post.content, length: 100
+%ul.posts
+  - @posts.each do |post|
+    %li.post
+      %h4
+        = link_to "#{post.title}", post_path(post)
+      %p
+        = truncate post.content, length: 200
