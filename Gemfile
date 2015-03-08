@@ -29,4 +29,6 @@ gem 'devise'
 gem 'pundit'
 # Use for Heroku integration
 gem 'rails_12factor', group: :production
+# Use Rubocop to check style
+gem 'rubocop'
 ruby '2.2.0'

@@ -10,7 +10,6 @@ class PostsController < ApplicationController
   end
 
   def edit
-
   end
 
   def new
@@ -30,6 +29,7 @@ class PostsController < ApplicationController
   end
 
   private
+
   def post_params
     params.require(:post).permit(:title, :content, :commit)
   end
