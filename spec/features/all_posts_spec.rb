@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "All Posts" do
+describe 'All Posts' do
   let!(:first_post) { create :post, title: 'First Post', created_at: 1.day.ago }
   let!(:second_post) { create :post, title: 'Second Post', created_at: Time.current }
 
