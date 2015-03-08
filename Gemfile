@@ -34,18 +34,19 @@ gem 'pundit'
 # Use Rubocop to check style
 gem 'rubocop'
 
-group :development do
-  # Use to automatically run tests
-  gem 'guard'
-  gem 'guard-rspec'
-end
-
 group :development, :test do
   # Use rspec for testing
   gem 'rspec-rails'
 
   # Use for test setup
   gem 'factory_girl_rails'
+
+  # Use for integration testing
+  gem 'capybara'
+
+  # Use to automatically run tests
+  gem 'guard'
+  gem 'guard-rspec'
 
   # Use byebug for debugging
   gem 'byebug'
