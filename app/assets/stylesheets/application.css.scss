@@ -1,6 +1,10 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
+//= require bootstrap
 
 body {
   padding-top: 60px;
+}
+
+.success-message, .danger-message {
+  //margin-top: 10px;
+  //padding: 10px;
 }

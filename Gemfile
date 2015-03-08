@@ -5,8 +5,6 @@ gem 'rails', '4.1.8'
 gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
-# Use bootstrap
-gem 'bootstrap-sass', '~> 3.3.1'
 # Add browser vendor prefixes automatically
 gem 'autoprefixer-rails'
 # Use Uglifier as compressor for JavaScript assets
