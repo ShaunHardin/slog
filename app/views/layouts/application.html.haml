@@ -10,9 +10,7 @@
     %header
       = render 'shared/header.html.haml'
     .container
-      %p.notice
-        = notice
-      %p.alert
-        = alert
+      = render partial: "shared/flash_messages", flash: flash
+ 
       = yield
 
