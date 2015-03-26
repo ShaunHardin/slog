@@ -23,7 +23,7 @@ gem 'haml'
 gem 'jquery-rails'
 
 # Use for faster feeling links
-gem 'tubolinks'
+gem 'turbolinks'
 
 # Use devise for authentication
 gem 'devise'
