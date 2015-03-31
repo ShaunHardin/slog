@@ -12,4 +12,23 @@
     .container
       = render partial: "shared/flash_messages", flash: flash
       #content
+        // this should be placed elsewhere
+        %section#todoapp
+          %header#header
+            %h1 todos
+            %input#new-todo{autofocus: "", placeholder: "What needs to be done?"}
+          %section#main
+            %input#toggle-all{type: "checkbox"}
+              %label{for: "toggle-all"} Mark all as complete
+              %ul#todo-list
+          %footer#footer
+        #info
+          %p Double-click to edit a todo
+          %p
+            Written by
+            %a{:href => "https://github.com/addyosmani"} Addy Osmani
+          %p
+            Part of
+            %a{:href => "http://todomvc.com"} TodoMVC
+
         = yield
