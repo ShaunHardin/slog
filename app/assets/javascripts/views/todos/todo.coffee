@@ -1,24 +1,33 @@
-app = app || {}
+class App.TodoView extends Backbone.View
 
-app.AppView = Backbone.View.extend({
-  el: '#todoapp'
-
-  statsTemplate: _.template $('#stats-template').html()
+  tagName: 'li'
+  template: JST['todos/todo_item']
+  events:
+    'dblclick label': 'edit'
+    'keypress .edit': 'updateOnEnter'
+    'blur .edit': 'close'
 
   initialize: ->
-    @.allCheckbox = @.$('#toggle-all')[0]
-    @.$input = @.$('#new-todo')
-    @.$footer = @.$('#footer')
-    @.$main = @.$('#main')
+    @.listenTo @.model, 'change', @.render
 
-    @.listenTo(app.Todos, 'add', @.addOne)
-    @.listenTo(app.Todos, 'reset', @.addAll)
+  render: ->
+    @.$el.html @.template(@.model.attributes)
+    @.$input = @.$('.edit')
+    @
 
-  addOne: (todo) ->
-    view = new app.TodoView({ model: todo })
-    $('#todo-list').append view.render().el
+  edit: ->
+    @.$el.addClass 'editing'
+    @.$input.focus()
 
-  addAll: ->
-    @.$('#todo-list').html ''
-    app.Todos.each(@.addOne, @)
-})
+  close: ->
+    value = @.$input.val().trim()
+
+    if value
+      @.model.save
+        title: value
+
+    @.$el.removeClass 'editing'
+
+  updateOnEnter: (e) ->
+    if e.which == ENTER_KEY
+      @.close()

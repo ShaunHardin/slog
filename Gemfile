@@ -37,6 +37,9 @@ gem 'rubocop'
 # Use for generating files necessary to use backbone.js
 gem 'backbone-on-rails'
 
+# Use for javascript templating
+gem 'ejs'
+
 group :development, :test do
   # Use rspec for testing
   gem 'rspec-rails'

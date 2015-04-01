@@ -276,6 +276,7 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.0.0)
   devise
+  ejs
   factory_girl_rails
   guard
   guard-rspec

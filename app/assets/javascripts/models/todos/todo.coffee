@@ -1,8 +1,6 @@
-app = app || {}
-
-app.Todo = Backbone.Model.extend({
+class App.Todo extends Backbone.Model
   defaults:
-    title: '',
+    title: ''
     completed: false
 
   toggle: ->
@@ -10,4 +8,3 @@ app.Todo = Backbone.Model.extend({
       completed:
         !@.get 'completed'
     )
-})
