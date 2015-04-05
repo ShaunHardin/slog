@@ -18,8 +18,10 @@
             %h1 To Dos
             %input.form-control.input-large#new-todo{autofocus: "", placeholder: "What needs to be done?"}
           %section#main
-            %input#toggle-all{type: "checkbox"}
-              %ul#todo-list
+            %span
+              %input#toggle-all{type: "checkbox"}
+              = label_tag 'toggle-all', 'Toggle all items'
+            %ul#todo-list
           %footer#footer
         #info
           %p Double-click to edit a todo
