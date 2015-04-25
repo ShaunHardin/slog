@@ -1,9 +1,32 @@
-%h1
-  This is the home page.
-%h3
-  I can display recent blog posts here. Or maybe other stuff.
+.home
+  .row
+    .jumbotron
+      .row
+        .col-md-2
+        .col-md-2
+          = image_tag "osu_headshot_crop.jpg", height: 175, width: 175, class: 'img-thumbnail'
+        .col-md-8
+          %h1
+            Shaun Hardin
+          %h4
+            Software Developer, Ohio State Graduate, and other things I'm sure...
 
-= link_to "View all posts", posts_path
+.row
+  .well
+    Welcome to my personal site! If you are looking for an explanation of what this site is meant to be, I have some bad news for you.
+    Originally, this site was intended to be a custom blog app written in Rails as a way to transition from .NET into the Rails ecosystem.
+    Since then, I fear it has become a bit of a landing ground for toying with clientside frameworks like Backbone and Ember,
+    as well as just a general place for experimenting with new things. It may or may not still be used as a blog, but if it looks
+    abandoned then it is likely that life got in the way. Getting a dog, getting engaged, and buying a house can do that to you, I suppose.
+
+.row
+  .panel.panel-default
+    .panel-heading.panel-title
+      About Me
+    .panel-body
+      A graduate of Ohio State with a degree in Computer Science and Engineering, I have been professionally developing software since 2012.
+      I started out in the .NET world but have since jumped head first into Ruby on Rails since joining CoverMyMeds in 2014. It's been a fun
+      transition and I enjoy learning new things about Rails every day.
 
 - if policy(:post).manage?
   %hr
