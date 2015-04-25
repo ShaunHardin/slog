@@ -22,9 +22,6 @@ gem 'haml'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
-
 # Use devise for authentication
 gem 'devise'
 
@@ -33,6 +30,10 @@ gem 'pundit'
 
 # Use Rubocop to check style
 gem 'rubocop'
+
+# Use ember.js
+gem 'ember-rails'
+gem 'ember-source'
 
 group :development, :test do
   # Use rspec for testing
