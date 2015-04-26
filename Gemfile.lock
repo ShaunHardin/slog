@@ -100,6 +100,7 @@ GEM
     factory_girl_rails (4.5.0)
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
+    ffaker (2.0.0)
     ffi (1.9.6)
     formatador (0.2.5)
     globalid (0.3.3)
@@ -157,6 +158,8 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    puma (2.11.2)
+      rack (>= 1.1, < 2.0)
     pundit (0.3.0)
       activesupport (>= 3.0.0)
     rack (1.6.0)
@@ -273,11 +276,13 @@ DEPENDENCIES
   ember-rails
   ember-source
   factory_girl_rails
+  ffaker
   guard
   guard-rspec
   haml
   jquery-rails
   pg
+  puma
   pundit
   rails (= 4.2.0)
   rails_12factor

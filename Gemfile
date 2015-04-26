@@ -35,6 +35,12 @@ gem 'rubocop'
 gem 'ember-rails'
 gem 'ember-source'
 
+# Generates test data
+gem 'ffaker'
+
+# Puma is faster and multithreaded
+gem 'puma'
+
 group :development, :test do
   # Use rspec for testing
   gem 'rspec-rails'

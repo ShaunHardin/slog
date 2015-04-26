@@ -5,5 +5,6 @@ Slog.Router.reopen
   rootURL: '/crm/'
 
 Slog.Router.map ()->
-  # @resource('posts')
+  @resource 'leads', path: '/', ->
+    @resource 'lead', path: '/leads/:id'
 
