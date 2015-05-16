@@ -4,6 +4,7 @@ Slog.Lead = DS.Model.extend
   email: DS.attr('string')
   phone: DS.attr('string')
   status: DS.attr('string', defaultValue: 'new')
+  statuses: ['new', 'in progress', 'closed', 'bad']
   notes: DS.attr('string')
 
   fullName: ( ->

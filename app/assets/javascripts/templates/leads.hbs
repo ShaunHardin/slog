@@ -4,7 +4,10 @@
   </h1>
   <ul>
     {{#each lead in controller}}
-      <li>{{lead.fullName}}</li>
+      {{#link-to 'lead' lead tagName='li'}}
+        {{lead.fullName}}
+      {{/link-to}}
     {{/each}}
   </ul>
 </article>
+{{outlet}}

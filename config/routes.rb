@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   end
 
   get '/crm/', to: 'ember#index'
-  #get '*path', to: 'ember#index'
+  get '*path', to: 'ember#index'
 end
