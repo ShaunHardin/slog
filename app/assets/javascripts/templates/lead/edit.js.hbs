@@ -1,0 +1,46 @@
+<article id="lead">
+  <h1>
+    {{model.fullName}}
+  </h1>
+
+  <form>
+    <fieldset>
+      <dl>
+        <dt>
+          <label>First Name:</label>
+        </dt>
+        <dd>
+          {{view Ember.TextField value=model.firstName}}
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <label>Last Name:</label>
+        </dt>
+        <dd>
+          {{view Ember.TextField value=model.lastName}}
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <label>Email:</label>
+        </dt>
+        <dd>
+          {{view Ember.TextField value=model.email}}
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <label>Phone:</label>
+        </dt>
+        <dd>
+          {{view Ember.TextField value=model.phone}}
+        </dd>
+      </dl>
+    </fieldset>
+    <fieldset class="actions">
+      <input type='submit' value='Save Changes' {{action 'saveChanges'}}>
+      <a class='cancel' href='#' {{action 'cancel'}}>cancel</a>
+    </fieldset>
+  </form>
+</article>

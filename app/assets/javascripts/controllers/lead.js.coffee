@@ -1,4 +1,5 @@
 Slog.LeadController = Ember.Controller.extend
+  isEditing: false
   showUnsavedMessage: ( ->
     @get('model.isDirty') and !@get('model.isSaving')
   ).property('model.isDirty', 'model.isSaving')
