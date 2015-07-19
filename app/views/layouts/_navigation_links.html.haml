@@ -2,6 +2,8 @@
   = link_to 'All Posts', posts_path
 - if user_signed_in?
   %li
+    = link_to 'To Do', todo_path
+  %li
     = link_to 'Log Out', destroy_user_session_path, method: :delete
 - else
   %li

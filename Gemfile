@@ -22,7 +22,7 @@ gem 'haml'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+# Use for faster feeling links
 gem 'turbolinks'
 
 # Use devise for authentication
@@ -33,6 +33,12 @@ gem 'pundit'
 
 # Use Rubocop to check style
 gem 'rubocop'
+
+# Use for generating files necessary to use backbone.js
+gem 'backbone-on-rails'
+
+# Use for javascript templating
+gem 'ejs'
 
 group :development, :test do
   # Use rspec for testing
